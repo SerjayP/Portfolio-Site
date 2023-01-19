@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+    width:auto;
+    height: 100%;
+    background-color: black;
+    font-family: 'Roboto Slab', serif;
+}
+.navColor {
+
+  background-color: black;
+}
+
+.headerImage {
+  display: flex;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/Untitled@2x.png");
+  align-items: center;
+  justify-content: center;
+  /* font-size: ; */
+  color: #ff551f;
+}
+.imageText {
+    text-align: center;
+}
+.imageText > h1{
+    font-size: 3rem;
+}
+.imageText > h2{
+    color: #f7b9a7;
+}
+.spinHover {
+  padding-left: 10px;
+}
+.spinHover:hover {
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  /* transform: rotate(3deg); */
+  /* transform: rotate(0.3rad);/ */
+  /* transform: rotate(3grad); */
+  /* transform: rotate(.03turn);  */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+a {
+    color: #ff551f;
+}
+a:link {
+  color: #ff551f;
+}
+.menu:hover {
+    color: #f7b9a7;
+}
+a:visited {
+  color: #ff551f;
+}
+a:active {
+  color: #ff551f;
+}
+.githubLink:link {
+    color: #a9a9a9;
+    text-align: center;
+
+  }
+.githubLink:hover {
+    color: #000000;
+  }
+  .githubLink:visited {
+    color: #ff551f;
+  }
+  .githubLink:active {
+    color: #ff551f;
+  }
+.content {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #616262;
+    border-radius: 10px;
+}
+.card {
+    margin: 10px;
+}
+.Placeholder {
+     background-color: rgb(81, 81, 81); 
+} 
+
+  .cardBody {
+    background-color: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .textOrange {
+
+    color: darkgray;
+  }
+  .noBorder {
+    border: none;
+    min-height: fit-content;
+  }
+  .contentHover {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .contentHover .content-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .contentHover:hover .content-overlay{
+    opacity: 1;
+  }
+  
+  .content-image{
+    width: 100%;
+  }
+  .githubLink {
+    color: #a9a9a9;
+    text-align: center;
+
+  }
+.githubLink:hover {
+    color: #f7b9a7;
+  }
+  .content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .contentHover:hover .content-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+  
+  .content-details {
+    color: #ff551f;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  
+  
+  .fadeIn-bottom{
+    top: 80%;
+  }
+  .sectionTitle {
+    color: #ff551f;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #aboutMe {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  #skills {
+    text-align: center;
+  }
+
+  .parallax {
+    /* The image used */
+    background-image: url('./images/load.jpg');
+  
+    /* Full height */
+    height: 50%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ footer {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #ff551f;
+    height: 40px
+  }
+  /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+    .mobile {
+        width: 100%;
+    }
+    footer {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        height: 40px
+      }
+  }
+ 
