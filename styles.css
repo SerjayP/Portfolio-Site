@@ -1,104 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@700&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body, html {
-    width:auto;
+ html {
+    width:100%;
     height: 100%;
-    background-color: black;
-    font-family: 'Roboto Slab', serif;
-}
-.navColor {
+ }
 
-  background-color: black;
+body {
+  width: 100%;
+  display: block;
+  /* display: flex; */
+  margin: auto;
+  background: #535252;
+  color: rgb(0, 0, 0);
+  font-family: 'BenchNine', sans-serif;
+  font-weight: 700;
+ 
 }
-
-.headerImage {
-  display: flex;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("./images/Untitled@2x.png");
-  align-items: center;
-  justify-content: center;
-  /* font-size: ; */
-  color: #ff551f;
+/*--------------------------- Navigation --------------------------- */
+.navbar {
+    width: 100%;
+position: fixed;
+  z-index: 9;
+  background: #535252;
+  color: rgb(255, 255, 255);
 }
-.imageText {
-    text-align: center;
+.nav-link{
+    color: aliceblue;
 }
-.imageText > h1{
-    font-size: 3rem;
+.link{
+    color: antiquewhite;
+    font-size: 20px;
 }
-.imageText > h2{
+.nav-link:hover {
     color: #f7b9a7;
 }
-.spinHover {
-  padding-left: 10px;
-}
-.spinHover:hover {
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  /* transform: rotate(3deg); */
-  /* transform: rotate(0.3rad);/ */
-  /* transform: rotate(3grad); */
-  /* transform: rotate(.03turn);  */
-}
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-a {
-    color: #ff551f;
-}
-a:link {
+.link:active {
   color: #ff551f;
 }
-.menu:hover {
-    color: #f7b9a7;
-}
-a:visited {
-  color: #ff551f;
-}
-a:active {
-  color: #ff551f;
-}
-.githubLink:link {
-    color: #a9a9a9;
-    text-align: center;
 
-  }
-.githubLink:hover {
-    color: #000000;
-  }
-  .githubLink:visited {
-    color: #ff551f;
-  }
-  .githubLink:active {
-    color: #ff551f;
-  }
-.content {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-    background-color: #616262;
-    border-radius: 10px;
-}
 .card {
     margin: 10px;
 }
@@ -111,11 +55,82 @@ a:active {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-  .textOrange {
+.red {
+    color: #ff551f;
+    font-size:x-large;
+}
+/* --------------------------- Home section --------------------------- */
+.home-section.active,
+.project-section.active,
+.about-section.active,
+.contact-section.active {
+    padding-top: 99px;
+  opacity: 1;
+  z-index: 8;
+  position: relative;
+  height: 100%;
+}
 
-    color: darkgray;
+.home-section {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  transition: 1;
+  overflow-y: hidden;
+}
+
+.headerImage {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("./images/Untitled@2x.png");
+    align-items: center;
+    justify-content: center;
+    color: #ff551f;
+    margin-bottom: -100px;
   }
-  .noBorder {
+  .imageText {
+      text-align: center;
+  }
+  .imageText > h1{
+      font-size: 3rem;
+  }
+  .imageText > h2{
+      color: #f7b9a7;
+  }
+/* --------------------------- Projects section --------------------------- */
+.project-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 25px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+}
+.card {
+    margin: 10px;
+}
+.Placeholder {
+     background-color: rgb(58, 57, 57); 
+} 
+
+  .cardBody {
+    background-color: black;
+    font-size: large;
+    color: #a9a9a9;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+.noBorder {
     border: none;
     min-height: fit-content;
   }
@@ -192,52 +207,56 @@ a:active {
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  #aboutMe {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-  }
-  #skills {
+
+/* --------------------------- about-section --------------------------- */
+
+.about-section {
+    width: 100%;
+  padding: 150px 50px 0;
+  position: fixed;
+  height: 100%;
+  opacity: 0;
+  transition: 1s;
+}
+.col {
+    padding: 10px;
+}
+.aboutMeBody {
+    background-color: #ffffff;
+    border-radius: 10px;
+    color: #777777;
+    
+}
+#skills {
     text-align: center;
   }
 
-  .parallax {
-    /* The image used */
-    background-image: url('./images/load.jpg');
-  
-    /* Full height */
-    height: 50%; 
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
- footer {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    color: #ff551f;
-    height: 40px
-  }
-  /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+/* ---------------------- contact section ----------------------*/
+.contact-section {
+    padding: 150px 25px 0;
+  position: fixed;
+  opacity: 0;
+  transition: 1s;
+  height: 100%;
+    padding-top: -50px;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: black; */
+    color: white;
+    text-align: center;
+    z-index: 9;
+}
+
+/* ------------  Media  ------------ */
 @media only screen and (max-device-width: 1366px) {
-    .parallax {
-      background-attachment: scroll;
-    }
     .mobile {
         width: 100%;
     }
-    footer {
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        height: 40px
-      }
+   
   }
- 
