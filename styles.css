@@ -73,19 +73,20 @@ body {
 .home-section {
   width: 100%;
   min-height: 100%;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   position: fixed;
   top: 0;
   opacity: 0;
   transition: 1;
   overflow-y: hidden;
+
 }
 
 .headerImage {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -93,7 +94,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #ff551f;
-  margin-bottom: -100px;
+
 }
 .imageText {
   text-align: center;
@@ -107,8 +108,8 @@ body {
 /* --------------------------- Projects section --------------------------- */
 .project-section {
   width: 100%;
-  min-height: 100vh;
-  padding: 150px 25px 100px;
+  height: 100%;
+  padding: 150px 25px 0;
   position: fixed;
   top: 0;
   transition: 1s;
@@ -230,12 +231,25 @@ body {
 }
 
 .button > button {
+
   margin-top: 40px;
 }
+
 
 .button > button:hover {
   color: #ff551f;
 }
+
+.centerButton {
+    width: 100%;
+    margin: 0;
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-0%, -20%);
+    transform: translate(-0%, -20%);
+  }
+
 .glow-on-hover {
   width: 300px;
   height: 75px;
@@ -341,6 +355,12 @@ input {
 .wrap {
   display: inline-block;
 }
+.button1 > button {
+    margin-top: 40px;
+  }
+.button1 > button:hover {
+    color: #faf6f5;
+  }
 .glow-on-hover1 {
   width: 300px;
   height: 75px;
@@ -431,4 +451,24 @@ input {
   .mobile {
     width: 100%;
   }
+  .headerImage {
+    
+    min-height: 99.9vh;
+
+  }
+  .glow-on-hover {
+    max-width: 50%;
+    max-height: 15%;
+    
+    font-size: 150%;
+
+  }
+  .glow-on-hover1 {
+    max-width: 50%;
+    max-height: 15%;
+    
+    font-size: 150%;
+
+  }
+ 
 }
